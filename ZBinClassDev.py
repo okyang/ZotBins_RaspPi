@@ -21,9 +21,9 @@ try:
     IS_PI_DEVICE = True
 except Exception as e:
     IS_PI_DEVICE = False
-    import RPi_DUMMY.GPIO as GPIO
-    from SERIAL_DUMMY import serial
-    from HCSR04_DUMMY.hcsr04 import HCSR04
+    from mock_sensors import GPIO, serial
+    from mock_sensors.hcsr04 import HCSR04
+    
 
 #=====API imports===============
 import json
